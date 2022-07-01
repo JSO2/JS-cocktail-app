@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #9d9d9d;
+    color: #fff;
+}
+
+li {
+    text-decoration: none;
+}
+
+
+/* Home page */
+
+.search-form h1 {
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding-top: 2rem;
+    margin: 1rem;
+    color: rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 15px rgba(186, 185, 185, 0.3), 0 0 10px rgba(186, 185, 185, 0.3);
+    text-align: center;
+}
+
+.searchBox {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.search-bar {
+    margin: 0 19rem;
+    width: 350px;
+    height: 30px;
+    border: solid 2 black;
+    border-radius: 5px;
+    outline: solid 1px black;
+    padding-left: 10px;
+}
+
+.clink {
+    display: inline-block;
+    animation: animate-clink 500ms infinite ease-in-out;
+}
+
+@keyframes animate-clink {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.main-title {
+    text-align: center;
+    margin-top: 16px;
+    color: rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 15px rgba(186, 185, 185, 0.3), 0 0 10px rgba(186, 185, 185, 0.3);
+    padding-top: 8px;
+    font-size: 48px;
+    -webkit-text-stroke: 3px #060606;
+    color: white;
+}
+
+.main-img {
+    border-radius: 10%;
+    max-width: 100%;
+    text-align: center;
+    margin: 16px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 2rem;
+}
+
+.main-img:hover {
+    opacity: 0.5;
+    transform: scale(0.9);
+}
+
+
+/* Drink Html */
+
+.drink-img {
+    border-radius: 10%;
+    max-width: 100%;
+    padding: 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 2rem;
+}
+
+.drink-name {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 16px;
+    color: rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 15px rgba(186, 185, 185, 0.3), 0 0 10px rgba(186, 185, 185, 0.3);
+    padding-top: 8px;
+    font-size: 48px;
+    -webkit-text-stroke: 3px #060606;
+    color: white;
+}
+
+.drink-info,
+.list {
+    color: rgb(231, 229, 229);
+    text-shadow: 0 0 15px rgba(255, 255, 255, .5), 0 0 10px rgba(255, 255, 255, .5);
+    padding-left: 20px;
+}
+
+.drink-info {
+    padding-bottom: 8px;
+    overflow-wrap: break-word;
+    width: 60%;
+}
+
+.backBtn {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: #4c5053;
+    color: white;
+    position: fixed;
+    bottom: 32px;
+    right: 40px;
+    z-index: 100;
+    box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.28);
+    text-decoration: none;
+    text-align: center;
+    padding-top: 16px;
+}
+
+.backBtn:hover {
+    transform: scale(0.9);
+}
+
+
+/* Footer */
+
+.footer {
+    text-align: center;
+}
+
+
+/* Small phones, tablets, large smartphones */
+
+@media(max-width: 768px) {
+    .search-bar {
+        min-width: 350px;
+        border: solid 2 black;
+        border-radius: 5px;
+        outline: solid 1px black;
+        padding-left: 10px;
+    }
+    .searchBox {
+        display: inline-block;
+    }
+    .search-form h1 {
+        font-size: 36px;
+        padding-left: 240px;
+    }
+    .main-title {
+        padding-top: 40px;
+        font-size: 36px;
+    }
+    .main-img {
+        width: 480px;
+    }
+    .drink-img {
+        width: 750px;
+    }
+    .drink-name {
+        font-size: 36px;
+        padding-bottom: 8px;
+    }
+}
+
+
+/* targetting small devices */
+
+@media(max-width: 480px) {
+    .search-form h1 {
+        font-size: 20px;
+        padding-left: 240px;
+    }
+    .search-bar {
+        border: solid 2 black;
+        border-radius: 5px;
+        outline: solid 1px black;
+        padding-left: 0;
+    }
+    .searchBox {
+        display: inline-block;
+        width: 200px;
+        padding-left: -100px;
+    }
+}
